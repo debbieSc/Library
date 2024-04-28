@@ -1,3 +1,6 @@
+const myLibrary = []
+const addBook = document.querySelector(".addBook")
+
 function books(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -16,3 +19,14 @@ IT.info();
 console.log(Object.getPrototypeOf(IT) === books.prototype);
 
 console.log(IT.valueOf());
+
+
+
+    addBook.addEventListener("click", () => {
+    
+        const bookAdded = document.getElementById("bookTitle").value;
+        console.log(bookAdded)
+    
+    });
+
+    console.log(addBook)

@@ -1,4 +1,44 @@
-p {
-    color: lightgreen;
-    font-size: 24px;
+form {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
 }
+
+form legend {
+    grid-column: 1/5;
+    font-size: 3rem;
+    justify-self: center;
+}
+
+form .bookTitle {
+    grid-row: 2;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+}
+
+
+form .author {
+    grid-row: 2;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+}
+
+form .pages {
+    grid-row: 2;
+    grid-column: 3/4;
+    
+    align-self: center;
+    justify-self: center;
+}
+
+form button {
+    grid-row: 2;
+    grid-column: 4/5;
+    width: 10rem;
+    align-self: center;
+    justify-self: center;
+}
+
+

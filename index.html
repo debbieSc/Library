@@ -10,8 +10,32 @@
 <body>
 
     <div class="container">
-
-        <p>test</p>
+            <form>
+                    <legend>Book Information</legend>
+            
+                      <p class="bookTitle">
+                        <label for="bookTitle">
+                            <span>Title: </span>
+                            <strong><span aria-label="required">*</span></strong>
+                          </label>
+                          <input type="text" id="bookTitle" name="bookTitle" required />
+                        </p>
+                      <p class="author">
+                        <label for="author">
+                            <span>Author: </span>
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" id="author" name="author" required />
+                    </p>
+                    <p class="pages">
+                        <label for="pages">
+                            <span>No of Pages: </span>
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" id="pages" name="pages" required />
+                    </p>
+                    <button class="addBook" type="submit">Add Book</button>
+            </form>
     </div>
     
 </body>
