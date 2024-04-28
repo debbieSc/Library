@@ -7,26 +7,31 @@ function books(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
 
-    this.info = function() {
-        return this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read
-}
 }
 
-const IT = new books("IT", "Stephen King", 345, "read")
 
-IT.info();
-
-console.log(Object.getPrototypeOf(IT) === books.prototype);
-
-console.log(IT.valueOf());
-
-
-
-    addBook.addEventListener("click", () => {
+function addBookToLibrary (){
     
-        const bookAdded = document.getElementById("bookTitle").value;
-        console.log(bookAdded)
+        const titleAdded = document.getElementById("bookTitle").value
+        const authorAdded = document.getElementById("author").value
+        const pagesAdded = document.getElementById("pages").value
+    
+        let libraryAdd = new books(titleAdded, authorAdded, pagesAdded, "yes")
+
+    
+        myLibrary.push(libraryAdd)
+    
+}
+
+
+
+
+
+    addBook.addEventListener("click", (event) => {
+        event.preventDefault();
+        
+        addBookToLibrary()
     
     });
 
-    console.log(addBook)
+  
