@@ -31,7 +31,17 @@ function addBookToLibrary (){
         event.preventDefault();
         
         addBookToLibrary()
+        document.querySelector(".displayForm").style.display = "none"
     
     });
 
   
+    const addBookButton = document.querySelector(".addBookButton")
+    
+
+    addBookButton.addEventListener("click", () => {
+        
+      document.querySelector(".displayForm").style.display = "block"
+        console.log("hello")
+    
+    });

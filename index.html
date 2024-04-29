@@ -8,9 +8,15 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+    
+    <header>
+        <button class="addBookButton">Add Book</button>
+    </header>
 
     <div class="container">
-            <form>
+        <div class="displayForm" style="display: none;">
+            <form >
+                
                     <legend>Book Information</legend>
             
                       <p class="bookTitle">
@@ -35,6 +41,7 @@
                         <input type="text" id="pages" name="pages" required />
                     </p>
                     <button class="addBook" type="submit">Add Book</button>
+                </div>
             </form>
     </div>
     
