@@ -1,17 +1,18 @@
 const myLibrary = []
 const addBook = document.querySelector(".addBook")
+const addBookButton = document.querySelector(".addBookButton")
+const displayForm = document.querySelector(".displayForm")
+
 
 function books(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
-
 }
 
 
 function addBookToLibrary (){
-    
         const titleAdded = document.getElementById("bookTitle").value
         const authorAdded = document.getElementById("author").value
         const pagesAdded = document.getElementById("pages").value
@@ -20,7 +21,6 @@ function addBookToLibrary (){
 
     
         myLibrary.push(libraryAdd)
-    
 }
 
 
@@ -31,17 +31,26 @@ function addBookToLibrary (){
         event.preventDefault();
         
         addBookToLibrary()
-        document.querySelector(".displayForm").style.display = "none"
-    
+        const allInputs = document.querySelectorAll("input")
+        allInputs.forEach(element => element.value = "")
+        displayForm.close()
+        document.querySelector(".addBookButton").style.display = "block"
     });
 
   
-    const addBookButton = document.querySelector(".addBookButton")
+    
     
 
     addBookButton.addEventListener("click", () => {
         
-      document.querySelector(".displayForm").style.display = "block"
+      displayForm.showModal()
+      
         console.log("hello")
     
     });
+
+    
+
+    function libraryCard() {
+
+    }

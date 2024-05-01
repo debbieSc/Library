@@ -1,3 +1,7 @@
+.container {
+    display: grid;
+}
+
 form {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -41,4 +45,23 @@ form button {
     justify-self: center;
 }
 
+.cards {
+    display: grid;
+    grid-template: auto;
+}
+
+.addBookButton {
+    grid-row: 2;
+    grid-column: 4/5;
+}
+
+.displayForm {
+    background-color: rgb(227, 203, 250);
+    border-color: rgb(195, 78, 224);
+   
+}
+
+.displayForm::backdrop {
+    background: linear-gradient(45deg, rgb(255, 199, 207), rgb(214, 171, 255))   ;
+}
 

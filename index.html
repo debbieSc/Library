@@ -9,14 +9,16 @@
 </head>
 <body>
     
-    <header>
-        <button class="addBookButton">Add Book</button>
-    </header>
+    
+        
+    
 
     <div class="container">
-        <div class="displayForm" style="display: none;">
+
+        <button class="addBookButton">Add Book</button>
+
+        <dialog class="displayForm">
             <form >
-                
                     <legend>Book Information</legend>
             
                       <p class="bookTitle">
@@ -43,6 +45,19 @@
                     <button class="addBook" type="submit">Add Book</button>
                 </div>
             </form>
+    </dialog>
+
+    <div class="cards">
+        <div>Title: </div>
+        <div>Author: </div>
+        <div>Pages: </div>
+
+        <Form>
+                <label for="read">
+                    <span>Read: </span>
+                    <input type="checkbox" id="read" name="read" value="read" />
+        </Form>
+
     </div>
     
 </body>
