@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
 <body>
     
-    
+    <header>
+        <p>My Library</p>
         
+    </header> 
     
 
     <div class="container">
 
-        <button class="addBookButton">Add Book</button>
+        
+
 
         <dialog class="displayForm">
-            <form >
-                    <legend>Book Information</legend>
+            <form class="mainForm">
+                    <legend>Book Info</legend>
             
                       <p class="bookTitle">
                         <label for="bookTitle">
@@ -37,28 +40,236 @@
                     </p>
                     <p class="pages">
                         <label for="pages">
-                            <span>No of Pages: </span>
+                            <span>Pages: </span>
                             <strong><span aria-label="required">*</span></strong>
                         </label>
                         <input type="text" id="pages" name="pages" required />
                     </p>
-                    <button class="addBook" type="submit">Add Book</button>
-                </div>
+                    <button class="addBook" type="submit">Add</button>
+                
             </form>
     </dialog>
+</div>
 
-    <div class="cards">
-        <div>Title: </div>
-        <div>Author: </div>
-        <div>Pages: </div>
 
-        <Form>
-                <label for="read">
-                    <span>Read: </span>
+
+    <div class="wrapper">
+    <table>
+        <caption><button class="addBookButton">Add Book</button></caption>
+        <tr>
+            <th>Book Title</th>
+            <th>Book Author</th>
+            <th>No of Pages</th>
+            <th>Read</th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>Insomnia</td>
+            <td>Stephen King</td>
+            <td>856</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
                     <input type="checkbox" id="read" name="read" value="read" />
-        </Form>
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
 
+
+        <tr>
+            <td>Pet Semetry</td>
+            <td>Stephen King</td>
+            <td>357</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>Stephen King</td>
+            <td>425</td>
+            <td> 
+                <Form class="smallForm">
+                    <label for="read">
+                    <input type="checkbox" id="read" name="read" value="read" />
+                </Form>
+            </td>
+            <td>
+                <button class="delete">🚮</button>
+            </td>
+        </tr>
+
+        
+
+
+
+        
+
+
+    </table>
     </div>
-    
+
 </body>
 </html>

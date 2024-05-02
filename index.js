@@ -34,7 +34,7 @@ function addBookToLibrary (){
         const allInputs = document.querySelectorAll("input")
         allInputs.forEach(element => element.value = "")
         displayForm.close()
-        document.querySelector(".addBookButton").style.display = "block"
+       
     });
 
   
@@ -44,8 +44,7 @@ function addBookToLibrary (){
     addBookButton.addEventListener("click", () => {
         
       displayForm.showModal()
-      
-        console.log("hello")
+
     
     });
 
