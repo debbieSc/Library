@@ -3,11 +3,12 @@ const addBook = document.querySelector(".addBook")
 const addBookButton = document.querySelector(".addBookButton")
 const displayForm = document.querySelector(".displayForm")
 const table = document.querySelector(".table")
-let i = 1
+let bookIndex = 0
+let i = 0
 
 
-
-function books(title, author, pages, read) {
+function books(index, title, author, pages, read) {
+    this.index = index
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -16,13 +17,53 @@ function books(title, author, pages, read) {
 
 
 function addBookToLibrary (){
+
+        const indexNumber = bookIndex++
         const titleAdded = document.getElementById("bookTitle").value
         const authorAdded = document.getElementById("author").value
         const pagesAdded = document.getElementById("pages").value
-        let libraryAdd = new books(titleAdded, authorAdded, pagesAdded, "yes")
-        myLibrary.push(libraryAdd)
-        libraryTable(titleAdded, authorAdded, pagesAdded)
+        const haveRead = document.getElementById("read").value
+        let libraryAdd = new books(indexNumber, titleAdded, authorAdded, pagesAdded, haveRead)
+        myLibrary.unshift(libraryAdd)
+        //libraryTable(titleAdded, authorAdded, pagesAdded, haveRead)
+        addToLibraryTable (libraryAdd)
 }
+
+let m = 0
+
+function addToLibraryTable (bookToAdd) {
+
+            
+            
+            let row = table.insertRow(1)
+            let deleteBtn = document.createElement("Button")
+            deleteBtn.className = "delete"
+            deleteBtn.id = bookToAdd.index
+            deleteBtn.textContent = "🚮"
+            let readCheck = document.createElement("input")
+            readCheck.id = bookToAdd.index
+            readCheck.type = "checkbox"
+                if(bookToAdd.read == "on") {
+                    readCheck.checked = true
+                }
+            row.insertCell(0).innerText = bookToAdd.title
+            row.insertCell(1).innerText = bookToAdd.author
+            row.insertCell(2).innerText = bookToAdd.pages
+            row.insertCell(3).appendChild(readCheck)
+            row.insertCell(4).appendChild(deleteBtn)
+
+            deleteBook(deleteBtn)
+            changeArray(readCheck)
+}
+
+    
+    
+    function changeArray (changeCheck) {
+
+        changeCheck.addEventListener("click", (event) => {
+
+        })
+    }
 
 
 
@@ -44,26 +85,6 @@ function addBookToLibrary (){
     });
 
     
-
-    function libraryTable(titleTotable, authorToTable, pagesToTable) {    
-        let row = table.insertRow(1)
-        row.id = i++
-        let deleteBtn = document.createElement("Button")
-        deleteBtn.className = "delete"
-        deleteBtn.id = titleTotable
-        deleteBtn.textContent = "🚮"
-        let readCheck = document.createElement("input")
-        readCheck.id = titleTotable
-        readCheck.type = "checkbox"
-        row.insertCell(0).innerText = titleTotable
-        row.insertCell(1).innerText = authorToTable
-        row.insertCell(2).innerText = pagesToTable
-        row.insertCell(3).appendChild(readCheck)
-        row.insertCell(4).appendChild(deleteBtn)
-
-        deleteBook(deleteBtn)
-    }
-
     
     function deleteBook(deleted) {
 
@@ -73,9 +94,9 @@ function addBookToLibrary (){
 
         deleted.closest("tr").remove()
 
-        for (let i = 0; i < myLibrary.length; i++) {
-            if (myLibrary[i].title == deleted.id) {
-                myLibrary.splice(i, 1) 
+        for (let j = 0; j < myLibrary.length; j++) {
+            if (myLibrary[j].title == deleted.id) {
+                myLibrary.splice(j, 1) 
             }
 
             

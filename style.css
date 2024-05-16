@@ -47,7 +47,13 @@ header {
     justify-self: right;
 }
 
+.mainForm .read {
+    grid-column: 1;
+    grid-row: 5;
+}
+
 .mainForm button {
+    grid-column: 2;
     grid-row: 5;
     width: 3rem;
     height: 3rem;
